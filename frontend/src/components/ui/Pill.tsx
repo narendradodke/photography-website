@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 interface PillProps {
   label: string;
@@ -17,7 +17,7 @@ export const Pill: React.FC<PillProps> = ({ label, active = false, onClick, coun
         ${
           active
             ? 'bg-[#D4AF37] text-black shadow-lg shadow-[#D4AF37]/25'
-            : 'bg-[#181818] text-neutral-400 hover:text-white hover:bg-[#252525] border border-[#2D2D2D]'
+            : 'bg-[#181818] dark:bg-[#181818] light:bg-neutral-100 text-neutral-400 dark:text-neutral-400 light:text-neutral-600 hover:text-white dark:hover:text-white light:hover:text-neutral-900 hover:bg-[#252525] dark:hover:bg-[#252525] light:hover:bg-neutral-200 border border-[#2D2D2D] dark:border-[#2D2D2D] light:border-neutral-300'
         }
       `}
     >

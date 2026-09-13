@@ -68,8 +68,8 @@ export const Portfolio: React.FC = () => {
             <div className="p-4 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/5 mb-4">
               <Camera className="w-8 h-8 text-[#D4AF37]" />
             </div>
-            <p className="font-serif text-xl text-white font-medium">Photos coming soon</p>
-            <p className="text-xs text-neutral-400 mt-2 uppercase tracking-[0.2em]">
+            <p className="font-serif text-xl text-white dark:text-white light:text-neutral-900 font-medium">Photos coming soon</p>
+            <p className="text-xs text-neutral-400 dark:text-neutral-400 light:text-neutral-600 mt-2 uppercase tracking-[0.2em]">
               New moments for this category will be uploaded soon
             </p>
           </div>
@@ -85,7 +85,7 @@ export const Portfolio: React.FC = () => {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.4 }}
                   onClick={() => openLightbox(items, index)}
-                  className="group relative cursor-pointer overflow-hidden bg-neutral-900 border border-neutral-800 dark:border-neutral-800 light:border-neutral-200"
+                  className="group relative cursor-pointer overflow-hidden bg-neutral-900 dark:bg-neutral-900 light:bg-neutral-100 border border-neutral-800 dark:border-neutral-800 light:border-neutral-200"
                 >
                   {/* Image */}
                   <div className="aspect-[4/5] w-full overflow-hidden">

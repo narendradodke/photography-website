@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" class="dark scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -11,8 +11,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Instant theme initialization -->
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('lensframe_theme');
+          if (theme === 'light') {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('light');
+          } else {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+          }
+        } catch(e) {}
+      })();
+    </script>
   </head>
-  <body class="bg-[#0A0A0A] text-white selection:bg-[#D4AF37] selection:text-black antialiased transition-colors duration-300">
+  <body class="bg-[#0A0A0A] dark:bg-[#0A0A0A] light:bg-[#F8F8F8] text-white dark:text-white light:text-neutral-900 selection:bg-[#D4AF37] selection:text-black antialiased transition-colors duration-300">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
