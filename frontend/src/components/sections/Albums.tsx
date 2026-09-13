@@ -116,13 +116,13 @@ export const Albums: React.FC = () => {
           {data.carousel.map((album) => (
             <div
               key={album.id}
-              className="shrink-0 w-72 sm:w-80 snap-start group relative overflow-hidden bg-neutral-900 border border-neutral-800 dark:border-neutral-800 light:border-neutral-300"
+              className="shrink-0 w-80 sm:w-[420px] snap-start group relative overflow-hidden bg-neutral-900 border border-neutral-800 dark:border-neutral-800 light:border-neutral-300"
             >
-              <div className="h-64 sm:h-72 overflow-hidden relative">
+              <div className="aspect-[16/9] w-full overflow-hidden relative bg-black/40">
                 <img
                   src={album.cover}
                   alt={album.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               </div>

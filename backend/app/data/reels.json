@@ -1,34 +1,58 @@
-﻿[
+[
   {
     "id": "reel-1",
-    "title": "Travel Vibes",
-    "duration": "1:12",
-    "photosCount": 80,
-    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-photographer-taking-photos-of-a-woman-in-a-field-41584-large.mp4",
-    "cover": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80"
+    "shortcode": "DZgrPl8Cotn",
+    "url": "https://www.instagram.com/reel/DZgrPl8Cotn/",
+    "embedUrl": "https://www.instagram.com/reel/DZgrPl8Cotn/embed/",
+    "title": "Royal Heritage Nuptials",
+    "category": "Weddings"
   },
   {
     "id": "reel-2",
-    "title": "Behind The Scenes",
-    "duration": "0:58",
-    "photosCount": 45,
-    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-young-woman-photographer-taking-photos-on-a-rooftop-41585-large.mp4",
-    "cover": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80"
+    "shortcode": "DXwT1WAPEsg",
+    "url": "https://www.instagram.com/reel/DXwT1WAPEsg/",
+    "embedUrl": "https://www.instagram.com/reel/DXwT1WAPEsg/embed/",
+    "title": "Pure Joy & Candid Vows",
+    "category": "Weddings"
   },
   {
     "id": "reel-3",
-    "title": "Wedding Highlights",
-    "duration": "2:30",
-    "photosCount": 120,
-    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-bride-and-groom-having-their-first-dance-41588-large.mp4",
-    "cover": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80"
+    "shortcode": "DXMcR7ODxsR",
+    "url": "https://www.instagram.com/reel/DXMcR7ODxsR/",
+    "embedUrl": "https://www.instagram.com/reel/DXMcR7ODxsR/embed/",
+    "title": "Golden Hour Bridal Walk",
+    "category": "Bridal"
   },
   {
     "id": "reel-4",
-    "title": "Nature Vibes",
-    "duration": "1:45",
-    "photosCount": 60,
-    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-camera-filming-a-sunset-over-a-field-41587-large.mp4",
-    "cover": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+    "shortcode": "DVXmACQjx0v",
+    "url": "https://www.instagram.com/reel/DVXmACQjx0v/",
+    "embedUrl": "https://www.instagram.com/reel/DVXmACQjx0v/embed/",
+    "title": "Intimate Celebrations",
+    "category": "Ceremony"
+  },
+  {
+    "id": "reel-5",
+    "shortcode": "DZkMacFioOP",
+    "url": "https://www.instagram.com/reel/DZkMacFioOP/",
+    "embedUrl": "https://www.instagram.com/reel/DZkMacFioOP/embed/",
+    "title": "Cinematic Sangeet Rhythm",
+    "category": "Festivities"
+  },
+  {
+    "id": "reel-6",
+    "shortcode": "DXS3wOpD2Xh",
+    "url": "https://www.instagram.com/reel/DXS3wOpD2Xh/",
+    "embedUrl": "https://www.instagram.com/reel/DXS3wOpD2Xh/embed/",
+    "title": "The Grand Jaimala Magic",
+    "category": "Moments"
+  },
+  {
+    "id": "reel-7",
+    "shortcode": "DYI8Uccinj_",
+    "url": "https://www.instagram.com/reel/DYI8Uccinj_/",
+    "embedUrl": "https://www.instagram.com/reel/DYI8Uccinj_/embed/",
+    "title": "Forever Begins Tonight",
+    "category": "Weddings"
   }
 ]

@@ -1,4 +1,4 @@
-﻿# Logs
+# Logs
 logs
 *.log
 npm-debug.log*
@@ -28,3 +28,4 @@ __pycache__/
 venv/
 env/
 .pytest_cache/
+collaction/

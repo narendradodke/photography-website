@@ -1,102 +1,192 @@
-﻿[
+[
   {
-    "id": "port-1",
-    "title": "Royal Sunset Nuptials",
+    "id": "port-w1",
+    "title": "Bridal Trousseau & Heritage Jewels",
     "category": "weddings",
-    "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=85",
-    "thumbnail": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/weddings/wedding-1.jpg",
+    "thumbnail": "/images/weddings/wedding-1.jpg",
     "location": "Udaipur, Rajasthan",
-    "date": "Nov 2024",
-    "aspect": "vertical"
-  },
-  {
-    "id": "port-2",
-    "title": "Editorial Golden Hour",
-    "category": "portraits",
-    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1600&q=85",
-    "thumbnail": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
-    "location": "Mumbai, Maharashtra",
     "date": "Dec 2024",
     "aspect": "vertical"
   },
   {
-    "id": "port-3",
-    "title": "Ladakh High Passes",
-    "category": "travel",
-    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=85",
-    "thumbnail": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-    "location": "Pangong Tso, Ladakh",
-    "date": "Oct 2024",
-    "aspect": "horizontal"
+    "id": "port-w2",
+    "title": "The Joyful Radiance",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-2.jpg",
+    "thumbnail": "/images/weddings/wedding-2.jpg",
+    "location": "Chennai, Tamil Nadu",
+    "date": "Jan 2025",
+    "aspect": "vertical"
   },
   {
-    "id": "port-4",
-    "title": "Gala Night Celebrations",
-    "category": "events",
-    "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=85",
-    "thumbnail": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80",
+    "id": "port-w3",
+    "title": "Serene Grace in Kanjeevaram",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-3.jpg",
+    "thumbnail": "/images/weddings/wedding-3.jpg",
+    "location": "Bangalore, Karnataka",
+    "date": "Feb 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-w4",
+    "title": "Veiled in Royal Splendor",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-4.jpg",
+    "thumbnail": "/images/weddings/wedding-4.jpg",
+    "location": "Jaipur, Rajasthan",
+    "date": "Jan 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-w5",
+    "title": "The Contemporary Bride",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-5.jpg",
+    "thumbnail": "/images/weddings/wedding-5.jpg",
+    "location": "Kochi, Kerala",
+    "date": "Feb 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-w6",
+    "title": "Paithani Splendor & Shringar",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-6.jpg",
+    "thumbnail": "/images/weddings/wedding-6.jpg",
+    "location": "Pune, Maharashtra",
+    "date": "Feb 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-w7",
+    "title": "Saundarya \u2014 Timeless Bridal Allure",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-7.jpg",
+    "thumbnail": "/images/weddings/wedding-7.jpg",
     "location": "Delhi NCR",
     "date": "Jan 2025",
-    "aspect": "horizontal"
+    "aspect": "vertical"
   },
   {
-    "id": "port-5",
-    "title": "The Eternal Vows",
+    "id": "port-w8",
+    "title": "Crimson Heritage Veil",
     "category": "weddings",
-    "image": "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1600&q=85",
-    "thumbnail": "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/weddings/wedding-8.jpg",
+    "thumbnail": "/images/weddings/wedding-8.jpg",
     "location": "Jaipur, Rajasthan",
     "date": "Dec 2024",
     "aspect": "vertical"
   },
   {
-    "id": "port-6",
-    "title": "Minimalist Fashion Silhouette",
-    "category": "portraits",
-    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1600&q=85",
-    "thumbnail": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
-    "location": "Bangalore",
-    "date": "Feb 2025",
-    "aspect": "vertical"
-  },
-  {
-    "id": "port-7",
-    "title": "Banaras Mystical Ghats",
-    "category": "travel",
-    "image": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1600&q=85",
-    "thumbnail": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=600&q=80",
-    "location": "Varanasi, UP",
-    "date": "Jan 2025",
-    "aspect": "horizontal"
-  },
-  {
-    "id": "port-8",
-    "title": "Sangeet Symphony",
-    "category": "events",
-    "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=85",
-    "thumbnail": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80",
-    "location": "Indore, MP",
-    "date": "Feb 2025",
-    "aspect": "horizontal"
-  },
-  {
-    "id": "port-9",
-    "title": "Heritage Bridal Elegance",
+    "id": "port-w9",
+    "title": "Emerald Silk & Temple Jewels",
     "category": "weddings",
-    "image": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1600&q=85",
-    "thumbnail": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80",
-    "location": "Jodhpur, Rajasthan",
+    "image": "/images/weddings/wedding-9.jpg",
+    "thumbnail": "/images/weddings/wedding-9.jpg",
+    "location": "Hyderabad, Telangana",
+    "date": "Feb 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-w10",
+    "title": "The Bougainvillea Promenade",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-10.jpg",
+    "thumbnail": "/images/weddings/wedding-10.jpg",
+    "location": "Kolkata, West Bengal",
+    "date": "Nov 2024",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-w11",
+    "title": "Scarlet Rose & Traditional Gold",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-11.jpg",
+    "thumbnail": "/images/weddings/wedding-11.jpg",
+    "location": "Indore, MP",
     "date": "Jan 2025",
     "aspect": "vertical"
   },
   {
-    "id": "port-10",
-    "title": "Artisan in Solitude",
-    "category": "portraits",
-    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1600&q=85",
-    "thumbnail": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
-    "location": "Kochi, Kerala",
-    "date": "Nov 2024",
+    "id": "port-w12",
+    "title": "The Regal Kaleere Ceremony",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-12.jpg",
+    "thumbnail": "/images/weddings/wedding-12.jpg",
+    "location": "Amritsar, Punjab",
+    "date": "Dec 2024",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-w13",
+    "title": "Floral Braid & Temple Silk",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-13.jpg",
+    "thumbnail": "/images/weddings/wedding-13.jpg",
+    "location": "Madurai, Tamil Nadu",
+    "date": "Jan 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-w14",
+    "title": "Verdant Garden Nuptials",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-14.jpg",
+    "thumbnail": "/images/weddings/wedding-14.jpg",
+    "location": "Mysore, Karnataka",
+    "date": "Feb 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-w15",
+    "title": "The Gilded Gaze",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-15.jpg",
+    "thumbnail": "/images/weddings/wedding-15.jpg",
+    "location": "Lucknow, UP",
+    "date": "Jan 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-w16",
+    "title": "Mehndi Reverie in Tropical Foliage",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-16.jpg",
+    "thumbnail": "/images/weddings/wedding-16.jpg",
+    "location": "Goa, India",
+    "date": "Feb 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-w17",
+    "title": "Spotlight Majesty in Crimson",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-17.jpg",
+    "thumbnail": "/images/weddings/wedding-17.jpg",
+    "location": "Mumbai, Maharashtra",
+    "date": "Jan 2025",
+    "aspect": "horizontal"
+  },
+  {
+    "id": "port-w18",
+    "title": "The Vogue Saree Swag",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-18.jpg",
+    "thumbnail": "/images/weddings/wedding-18.jpg",
+    "location": "Chennai, Tamil Nadu",
+    "date": "Feb 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-w19",
+    "title": "Polki Heritage & Chiaroscuro",
+    "category": "weddings",
+    "image": "/images/weddings/wedding-19.jpg",
+    "thumbnail": "/images/weddings/wedding-19.jpg",
+    "location": "Hyderabad, Telangana",
+    "date": "Dec 2024",
     "aspect": "vertical"
   }
 ]

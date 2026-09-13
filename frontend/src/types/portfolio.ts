@@ -1,7 +1,7 @@
-﻿export interface PortfolioItem {
+export interface PortfolioItem {
   id: string;
   title: string;
-  category: 'weddings' | 'portraits' | 'travel' | 'events';
+  category: 'weddings' | 'haldi' | 'mehndi' | 'baby-shoot' | string;
   image: string;
   thumbnail: string;
   location: string;
@@ -34,12 +34,17 @@ export interface AlbumsData {
 
 export interface ReelItem {
   id: string;
+  shortcode: string;
+  url: string;
+  embedUrl: string;
   title: string;
-  duration: string;
-  photosCount: number;
-  videoUrl: string;
-  cover: string;
+  category: string;
+  duration?: string;
+  photosCount?: number;
+  videoUrl?: string;
+  cover?: string;
 }
+
 
 export interface PackageItem {
   id: string;

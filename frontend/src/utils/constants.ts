@@ -1,4 +1,4 @@
-﻿import type { NavItem } from '../types/common';
+import type { NavItem } from '../types/common';
 
 export const SITE_NAME = 'LensFrame';
 export const PHOTOGRAPHER_NAME = 'Arjun Sharma';

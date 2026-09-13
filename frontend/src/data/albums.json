@@ -1,45 +1,80 @@
-﻿{
+{
   "featured": {
     "id": "album-featured",
-    "title": "Royal Wedding — Udaipur Palace",
-    "subtitle": "An extravagant royal heritage saga featuring Siddharth & Ananya",
-    "photosCount": 30,
-    "badge": "Premium Album",
-    "cover": "https://images.unsplash.com/photo-1545232979-fbf67362c3e1?auto=format&fit=crop&w=1600&q=85",
+    "title": "Royal Mandap & Grand Vows",
+    "subtitle": "An extravagant royal wedding album spread handcrafted with gold foiling and archival fine-art paper.",
+    "photosCount": 50,
+    "badge": "Handcrafted Album Spread",
+    "cover": "/images/albums/album-4.jpg",
     "previewImages": [
-      "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80"
+      "/images/albums/album-1.jpg",
+      "/images/albums/album-2.jpg",
+      "/images/albums/album-5.jpg"
     ]
   },
   "carousel": [
     {
-      "id": "album-classic",
-      "title": "Classic Romance",
+      "id": "album-1",
+      "title": "Royal Heritage & Red Lehenga",
+      "photosCount": 45,
+      "tag": "Traditional Wedding Spread",
+      "cover": "/images/albums/album-1.jpg"
+    },
+    {
+      "id": "album-2",
+      "title": "Vibrant Festivities & South Indian Elegance",
       "photosCount": 50,
-      "tag": "Timeless Elegance",
-      "cover": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80"
+      "tag": "Ceremonial Panorama",
+      "cover": "/images/albums/album-2.jpg"
     },
     {
-      "id": "album-modern",
-      "title": "Modern Minimalist",
+      "id": "album-3",
+      "title": "Ethereal Pastel Ring Ceremony",
+      "photosCount": 35,
+      "tag": "Engagement Spread",
+      "cover": "/images/albums/album-3.jpg"
+    },
+    {
+      "id": "album-4",
+      "title": "Royal Mandap & Grand Vows",
       "photosCount": 60,
-      "tag": "Contemporary Chic",
-      "cover": "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80"
+      "tag": "Grandeur & Nuptials",
+      "cover": "/images/albums/album-4.jpg"
     },
     {
-      "id": "album-vintage",
-      "title": "Vintage Nostalgia",
+      "id": "album-5",
+      "title": "Serene Forest Bride & Floral Memoir",
       "photosCount": 40,
-      "tag": "Sepia & Golden Tones",
-      "cover": "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80"
+      "tag": "Bridal Art Spread",
+      "cover": "/images/albums/album-5.jpg"
     },
     {
-      "id": "album-luxury",
-      "title": "Luxury Celebration",
-      "photosCount": 70,
-      "tag": "Grandeur & Sparkle",
-      "cover": "https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=800&q=80"
+      "id": "album-6",
+      "title": "Crimson Embrace — Each Other",
+      "photosCount": 45,
+      "tag": "Couple Editorial Spread",
+      "cover": "/images/albums/album-6.jpg"
+    },
+    {
+      "id": "album-7",
+      "title": "Saundarya Red Velvet Ceremony",
+      "photosCount": 50,
+      "tag": "Bridal Shringar Spread",
+      "cover": "/images/albums/album-7.jpg"
+    },
+    {
+      "id": "album-8",
+      "title": "Veiled Glow & Spotlight Nuptials",
+      "photosCount": 40,
+      "tag": "Royal Veil Spread",
+      "cover": "/images/albums/album-8.jpg"
+    },
+    {
+      "id": "album-9",
+      "title": "Vibrant Paithani Charm & Haldi Glow",
+      "photosCount": 45,
+      "tag": "Festive Silk Spread",
+      "cover": "/images/albums/album-9.jpg"
     }
   ]
 }

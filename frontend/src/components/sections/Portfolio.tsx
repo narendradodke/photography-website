@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, MapPin } from 'lucide-react';
+import { ArrowUpRight, MapPin, Camera } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Pill } from '../ui/Pill';
 import { getPortfolio } from '../../services/portfolioService';
@@ -10,9 +10,9 @@ import { useUIStore } from '../../store/uiStore';
 const CATEGORIES = [
   { id: 'all', label: 'All Work' },
   { id: 'weddings', label: 'Weddings' },
-  { id: 'portraits', label: 'Portraits' },
-  { id: 'travel', label: 'Travel' },
-  { id: 'events', label: 'Events' },
+  { id: 'haldi', label: 'Haldi' },
+  { id: 'mehndi', label: 'Mehndi' },
+  { id: 'baby-shoot', label: 'Baby Shoot' },
 ];
 
 export const Portfolio: React.FC = () => {
@@ -62,6 +62,16 @@ export const Portfolio: React.FC = () => {
         {loading ? (
           <div className="flex justify-center py-20">
             <div className="w-10 h-10 border-2 border-[#D4AF37] border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        ) : items.length === 0 ? (
+          <div className="flex flex-col items-center justify-center py-24 text-center">
+            <div className="p-4 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/5 mb-4">
+              <Camera className="w-8 h-8 text-[#D4AF37]" />
+            </div>
+            <p className="font-serif text-xl text-white font-medium">Photos coming soon</p>
+            <p className="text-xs text-neutral-400 mt-2 uppercase tracking-[0.2em]">
+              New moments for this category will be uploaded soon
+            </p>
           </div>
         ) : (
           <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
