@@ -1,0 +1,26 @@
+﻿[
+  {
+    "id": "test-1",
+    "name": "Pooja & Rohan Mehra",
+    "event": "Udaipur Destination Wedding",
+    "rating": 5,
+    "quote": "Arjun captured emotions we didn't even realize were happening! The cinematic tone and lighting were beyond our wildest expectations. Truly a visual poet.",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+  },
+  {
+    "id": "test-2",
+    "name": "Vikramaditya Rao",
+    "event": "Heritage Portrait Session",
+    "rating": 5,
+    "quote": "His eye for detail and mastery over shadow and natural sunlight is extraordinary. Every portrait feels worthy of an international magazine cover.",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+  },
+  {
+    "id": "test-3",
+    "name": "Sneha & Karan Singhania",
+    "event": "Royal Sangeet & Reception",
+    "rating": 5,
+    "quote": "From our first consultation to the final luxury album delivery, LensFrame delivered unmatched perfection. Best decision we made for our wedding!",
+    "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80"
+  }
+]

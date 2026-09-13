@@ -1,0 +1,52 @@
+﻿[
+  {
+    "id": "basic",
+    "name": "Basic",
+    "tagline": "Perfect for intimate ceremonies & portraits",
+    "price": "₹12,000",
+    "priceNum": 12000,
+    "popular": false,
+    "features": [
+      "4 Hours Coverage",
+      "200+ Edited Photos",
+      "Online Gallery Access (1 Year)",
+      "1 Hardcover Album (20 Pages)",
+      "Standard Color Grading",
+      "High-Resolution Digital Delivery"
+    ]
+  },
+  {
+    "id": "premium",
+    "name": "Premium",
+    "tagline": "Most Popular choice for destination & grand celebrations",
+    "price": "₹22,000",
+    "priceNum": 22000,
+    "popular": true,
+    "features": [
+      "8 Hours Full Coverage",
+      "500+ Edited Photos",
+      "Cinematic Teaser & Video (2-5 min)",
+      "2 Luxury Albums (40 Pages each)",
+      "All Raw & Final Files (Google Drive)",
+      "Pre-Wedding Consultation Shoot",
+      "Priority Delivery in 14 Days"
+    ]
+  },
+  {
+    "id": "luxury",
+    "name": "Luxury",
+    "tagline": "The ultimate cinematic experience and complete memoirs",
+    "price": "₹35,000",
+    "priceNum": 35000,
+    "popular": false,
+    "features": [
+      "Full Day Coverage (Unlimited Hours)",
+      "1000+ Premium Edited Photos",
+      "Cinematic Wedding Film (5-8 min)",
+      "3 Bespoke Leather Albums (80 Pages)",
+      "Aerial Drone Shots (Subject to venue)",
+      "Custom Engraved Crystal USB Box",
+      "Dedicated 2nd Senior Shooter"
+    ]
+  }
+]

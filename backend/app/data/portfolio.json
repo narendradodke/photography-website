@@ -1,0 +1,102 @@
+﻿[
+  {
+    "id": "port-1",
+    "title": "Royal Sunset Nuptials",
+    "category": "weddings",
+    "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
+    "location": "Udaipur, Rajasthan",
+    "date": "Nov 2024",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-2",
+    "title": "Editorial Golden Hour",
+    "category": "portraits",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1600&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+    "location": "Mumbai, Maharashtra",
+    "date": "Dec 2024",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-3",
+    "title": "Ladakh High Passes",
+    "category": "travel",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+    "location": "Pangong Tso, Ladakh",
+    "date": "Oct 2024",
+    "aspect": "horizontal"
+  },
+  {
+    "id": "port-4",
+    "title": "Gala Night Celebrations",
+    "category": "events",
+    "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80",
+    "location": "Delhi NCR",
+    "date": "Jan 2025",
+    "aspect": "horizontal"
+  },
+  {
+    "id": "port-5",
+    "title": "The Eternal Vows",
+    "category": "weddings",
+    "image": "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1600&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=600&q=80",
+    "location": "Jaipur, Rajasthan",
+    "date": "Dec 2024",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-6",
+    "title": "Minimalist Fashion Silhouette",
+    "category": "portraits",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1600&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+    "location": "Bangalore",
+    "date": "Feb 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-7",
+    "title": "Banaras Mystical Ghats",
+    "category": "travel",
+    "image": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1600&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=600&q=80",
+    "location": "Varanasi, UP",
+    "date": "Jan 2025",
+    "aspect": "horizontal"
+  },
+  {
+    "id": "port-8",
+    "title": "Sangeet Symphony",
+    "category": "events",
+    "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80",
+    "location": "Indore, MP",
+    "date": "Feb 2025",
+    "aspect": "horizontal"
+  },
+  {
+    "id": "port-9",
+    "title": "Heritage Bridal Elegance",
+    "category": "weddings",
+    "image": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1600&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80",
+    "location": "Jodhpur, Rajasthan",
+    "date": "Jan 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-10",
+    "title": "Artisan in Solitude",
+    "category": "portraits",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1600&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+    "location": "Kochi, Kerala",
+    "date": "Nov 2024",
+    "aspect": "vertical"
+  }
+]
