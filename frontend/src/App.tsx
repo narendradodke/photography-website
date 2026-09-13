@@ -3,7 +3,7 @@ import { Navbar } from './components/layout/Navbar';
 import { MobileMenu } from './components/layout/MobileMenu';
 import { Footer } from './components/layout/Footer';
 import { Hero } from './components/sections/Hero';
-import { About } from './components/sections/About';
+// import { About } from './components/sections/About';
 import { Portfolio } from './components/sections/Portfolio';
 import { Albums } from './components/sections/Albums';
 import { Reels } from './components/sections/Reels';
@@ -30,7 +30,7 @@ export const App: React.FC = () => {
       {/* Main Content Sections */}
       <main>
         <Hero />
-        <About />
+        {/* <About /> */}
         <Portfolio />
         <Albums />
         <Reels />

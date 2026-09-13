@@ -6,7 +6,7 @@ export const TAGLINE = 'Capture · Create · Forever';
 
 export const NAV_LINKS: NavItem[] = [
   { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
+  // { label: 'About', href: '#about' },
   { label: 'Portfolio', href: '#portfolio' },
   { label: 'Albums', href: '#albums' },
   { label: 'Reels', href: '#reels' },
