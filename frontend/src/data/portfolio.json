@@ -1,5 +1,135 @@
 [
   {
+    "id": "port-insta-1",
+    "title": "Mehndi Tales & Bridal Grace",
+    "category": "mehndi",
+    "image": "/images/portfolio/insta-1.webp",
+    "thumbnail": "/images/portfolio/insta-1.webp",
+    "location": "Indore, Madhya Pradesh",
+    "date": "Jan 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-insta-2",
+    "title": "Regal Red Lehenga Elegance",
+    "category": "weddings",
+    "image": "/images/portfolio/insta-2.webp",
+    "thumbnail": "/images/portfolio/insta-2.webp",
+    "location": "Udaipur, Rajasthan",
+    "date": "Dec 2024",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-insta-3",
+    "title": "Royal Heritage Bridal Portrait",
+    "category": "weddings",
+    "image": "/images/portfolio/insta-3.webp",
+    "thumbnail": "/images/portfolio/insta-3.webp",
+    "location": "Jaipur, Rajasthan",
+    "date": "Nov 2024",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-insta-4",
+    "title": "Sunflower Joy - Baby Shoot",
+    "category": "baby-shoot",
+    "image": "/images/portfolio/insta-4.webp",
+    "thumbnail": "/images/portfolio/insta-4.webp",
+    "location": "Bhopal, Madhya Pradesh",
+    "date": "Feb 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-insta-5",
+    "title": "Golden Bokeh Bridal Memoir",
+    "category": "weddings",
+    "image": "/images/portfolio/insta-5.webp",
+    "thumbnail": "/images/portfolio/insta-5.webp",
+    "location": "Indore, Madhya Pradesh",
+    "date": "Jan 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-insta-6",
+    "title": "Velvet Shadow & Heritage Jewels",
+    "category": "weddings",
+    "image": "/images/portfolio/insta-6.webp",
+    "thumbnail": "/images/portfolio/insta-6.webp",
+    "location": "Jodhpur, Rajasthan",
+    "date": "Dec 2024",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-insta-7",
+    "title": "The Royal Nuptial Couple",
+    "category": "weddings",
+    "image": "/images/portfolio/insta-7.webp",
+    "thumbnail": "/images/portfolio/insta-7.webp",
+    "location": "Gwalior, Madhya Pradesh",
+    "date": "Jan 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-insta-8",
+    "title": "A Royal Garland Ceremony",
+    "category": "weddings",
+    "image": "/images/portfolio/insta-8.webp",
+    "thumbnail": "/images/portfolio/insta-8.webp",
+    "location": "Ujjain, Madhya Pradesh",
+    "date": "Jan 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-insta-9",
+    "title": "Together in Eternal Harmony",
+    "category": "weddings",
+    "image": "/images/portfolio/insta-9.jpg",
+    "thumbnail": "/images/portfolio/insta-9.jpg",
+    "location": "Indore, Madhya Pradesh",
+    "date": "Feb 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-insta-10",
+    "title": "The Radiant Smile - Bridal Mosaic",
+    "category": "weddings",
+    "image": "/images/portfolio/insta-10.webp",
+    "thumbnail": "/images/portfolio/insta-10.webp",
+    "location": "Indore, Madhya Pradesh",
+    "date": "Jan 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-insta-11",
+    "title": "Haldi Ceremony Vibrance",
+    "category": "haldi",
+    "image": "/images/portfolio/insta-11.webp",
+    "thumbnail": "/images/portfolio/insta-11.webp",
+    "location": "Indore, Madhya Pradesh",
+    "date": "Feb 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-insta-12",
+    "title": "Lovebirds Pre-Wedding Memoir",
+    "category": "weddings",
+    "image": "/images/portfolio/insta-12.webp",
+    "thumbnail": "/images/portfolio/insta-12.webp",
+    "location": "Dewas, Madhya Pradesh",
+    "date": "Jan 2025",
+    "aspect": "vertical"
+  },
+  {
+    "id": "port-insta-13",
+    "title": "Sacred Temple Vows",
+    "category": "weddings",
+    "image": "/images/portfolio/insta-13.webp",
+    "thumbnail": "/images/portfolio/insta-13.webp",
+    "location": "Maheshwar, Madhya Pradesh",
+    "date": "Feb 2025",
+    "aspect": "horizontal"
+  },
+  {
     "id": "port-w1",
     "title": "Bridal Trousseau & Heritage Jewels",
     "category": "weddings",
