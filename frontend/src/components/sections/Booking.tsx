@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -25,6 +25,7 @@ type BookingFormValues = z.infer<typeof bookingSchema>;
 export const Booking: React.FC = () => {
   const { selectedPackageId, setSelectedPackageId } = useUIStore();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [successResult, setSuccessResult] = useState<{ id: string; message: string } | null>(null);
 
   const {
@@ -45,6 +46,7 @@ export const Booking: React.FC = () => {
 
   const onSubmit = async (values: BookingFormValues) => {
     setIsSubmitting(true);
+    setErrorMessage(null);
     try {
       const res = await submitBooking({
         full_name: values.full_name,
@@ -58,8 +60,10 @@ export const Booking: React.FC = () => {
         message: res.message,
       });
       reset();
-    } catch {
-      // Handled in service fallback
+    } catch (err: any) {
+      setErrorMessage(
+        err?.response?.data?.detail || 'Unable to submit booking enquiry at this time. Please check your network or try again shortly.'
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -126,6 +130,11 @@ export const Booking: React.FC = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                {errorMessage && (
+                  <div className="p-3 bg-red-950/40 border border-red-500/50 text-red-200 text-xs rounded">
+                    {errorMessage}
+                  </div>
+                )}
                 {/* Full Name */}
                 <div>
                   <label className="block text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-400 light:text-neutral-600 font-semibold mb-2">

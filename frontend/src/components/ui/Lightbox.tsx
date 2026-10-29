@@ -1,6 +1,7 @@
-﻿import React, { useEffect, useCallback } from 'react';
-import { X, ChevronLeft, ChevronRight, MapPin, Calendar } from 'lucide-react';
+import React, { useEffect, useCallback } from 'react';
+import { X, ChevronLeft, ChevronRight, MapPin, Calendar, Download } from 'lucide-react';
 import { useUIStore } from '../../store/uiStore';
+import { downloadPortfolioPhoto } from '../../utils/downloadHelper';
 
 export const Lightbox: React.FC = () => {
   const { lightbox, closeLightbox, nextLightbox, prevLightbox, openLightbox } = useUIStore();
@@ -36,10 +37,18 @@ export const Lightbox: React.FC = () => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md p-4 sm:p-8 animate-fade-in">
       {/* Top action bar */}
-      <div className="absolute top-6 right-6 z-50 flex items-center gap-4">
-        <span className="text-xs tracking-widest text-neutral-400">
+      <div className="absolute top-6 right-6 z-50 flex items-center gap-3">
+        <span className="text-xs tracking-widest text-neutral-400 mr-2">
           {currentIndex + 1} / {items.length}
         </span>
+        <button
+          onClick={() => downloadPortfolioPhoto(currentItem)}
+          className="p-2.5 rounded-full bg-white/10 hover:bg-[#D4AF37] hover:text-black text-white transition-colors duration-200"
+          title="Download High-Res Photo"
+          aria-label="Download High-Res Photo"
+        >
+          <Download className="w-5 h-5" />
+        </button>
         <button
           onClick={closeLightbox}
           className="p-2.5 rounded-full bg-white/10 hover:bg-[#D4AF37] hover:text-black text-white transition-colors duration-200"
@@ -94,6 +103,15 @@ export const Lightbox: React.FC = () => {
                 <span>{currentItem.date}</span>
               </div>
             </div>
+
+            <button
+              type="button"
+              onClick={() => downloadPortfolioPhoto(currentItem)}
+              className="mt-6 w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-[#D4AF37] hover:bg-[#c49f27] text-black font-semibold text-xs tracking-wider uppercase transition-all shadow-md hover:shadow-lg hover:scale-[1.02]"
+            >
+              <Download className="w-4 h-4" />
+              <span>Download High-Res</span>
+            </button>
           </div>
 
           {/* Thumbnail list */}

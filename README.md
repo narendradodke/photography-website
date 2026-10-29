@@ -41,7 +41,7 @@ Dark charcoal theme with champagne gold accents. Editorial magazine feel. Cinema
 | CORS Middleware | Frontend ↔ Backend |
 
 ### Database
-> ⏳ **Coming Soon** — Currently using mock JSON data in `/data/`. Will integrate **PostgreSQL + SQLAlchemy** later.
+> ✅ **Integrated SQLite Database (`lensframe.db`)** — ACID-compliant persistent relational storage with WAL mode, foreign keys, and automatic initialization + seeding.
 
 ---
 
@@ -342,18 +342,71 @@ export const scaleIn = {
 
 ---
 
+## 🛡️ Admin Console & Studio Management
+
+LensFrame includes a complete, production-grade **Admin Console** accessible at `/admin`.
+
+### Key Capabilities:
+- **Authentication & Security:** PBKDF2-HMAC-SHA256 salted password hashing, signed HS256 JWT tokens, rate limiting on login/inquiries, and role-based permissions (`superadmin`, `editor`).
+- **Studio Dashboard:** Real telemetry for bookings, enquiries, content inventory, recent audit activities, and monthly booking trends.
+- **Portfolio Management:** Upload, crop, edit titles, categorize (`weddings`, `haldi`, `mehndi`, `baby-shoot`), feature, and delete portfolio photos.
+- **Album Management:** Create, customize spreads, upload covers, toggle featured hero spread, and toggle public visibility.
+- **Reels & Video Management:** Add cinematic video files (MP4/WebM) or Instagram shortcodes with built-in preview player.
+- **Packages & Investment:** Manage pricing tiers, inclusions/features builder, and "Most Popular" flags.
+- **Testimonials & Memoirs:** Client review approval workflow (only approved memoirs appear on the public site).
+- **Client Reservations:** Full booking manager with status transitions (`pending` → `confirmed` → `completed` → `cancelled`), internal studio notes, direct customer calling links, and one-click **CSV Dataset Export**.
+- **Customer Inquiries:** Inquiries inbox with read/replied tracker and direct email reply shortcuts.
+- **Administrator Roster:** Multi-admin provisioning, role management, and active status toggling.
+- **Website Global Settings:** Manage Studio details, Social channels, Gallery settings, SEO tags, and administrator password rotation.
+
+### Default Administrator Credentials (Bootstrap)
+On fresh installation, the database automatically provisions the lead superadmin:
+- **URL:** `http://localhost:5173/admin/login` (or `/admin`)
+- **Username:** `admin`
+- **Default Password:** `LensFrame@2026!` *(Change promptly via Admin Console > Settings > Security)*
+
+---
+
 ## 🔌 Backend API Endpoints
 
+### Public Endpoints
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/api/health` | Health check |
-| GET | `/api/portfolio` | Get all portfolio items |
-| GET | `/api/portfolio?category=wedding` | Filter by category |
-| GET | `/api/albums` | Get all albums |
-| GET | `/api/reels` | Get all reels |
-| GET | `/api/packages` | Get all packages |
-| POST | `/api/booking` | Create new booking |
-| POST | `/api/contact` | Send contact message |
+| GET | `/api/health` | Health check & service status |
+| GET | `/api/portfolio` | Filterable public portfolio photos |
+| GET | `/api/albums` | Public featured & carousel album spreads |
+| GET | `/api/reels` | Published public reels & cinematics |
+| GET | `/api/packages` | Active pricing packages & inclusions |
+| GET | `/api/testimonials` | Approved client reviews |
+| GET | `/api/settings/public` | Public site information & social links |
+| POST | `/api/booking` | Submit client shoot reservation (rate-limited) |
+| POST | `/api/contact` | Send customer inquiry message (rate-limited) |
+
+### Admin Endpoints (Protected by Bearer Token)
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/auth/login` | Authenticate admin & receive JWT |
+| GET | `/api/auth/me` | Fetch authenticated admin profile |
+| POST | `/api/auth/change-password` | Rotate admin password |
+| GET | `/api/admin/dashboard/stats` | Real-time studio stats & analytics |
+| GET/POST | `/api/admin/portfolio` | List (paginated/filtered) & create photos |
+| PUT/DELETE | `/api/admin/portfolio/{id}` | Update metadata or delete photo |
+| POST | `/api/admin/portfolio/reorder` | Update gallery sequence order |
+| GET/POST | `/api/admin/albums` | List all albums & create spread |
+| PUT/DELETE | `/api/admin/albums/{id}` | Update spread, set featured, or delete |
+| GET/POST | `/api/admin/reels` | List all reels & add video reel |
+| PUT/DELETE | `/api/admin/reels/{id}` | Update or delete video reel |
+| GET/POST | `/api/admin/packages` | List & configure package pricing tiers |
+| PUT/DELETE | `/api/admin/packages/{id}` | Update inclusions, rates, or delete |
+| GET/POST | `/api/admin/testimonials` | List & create client reviews |
+| PUT/DELETE | `/api/admin/testimonials/{id}` | Toggle approval or delete review |
+| GET | `/api/admin/bookings` | Filtered bookings list (paginated) |
+| GET/PUT | `/api/admin/bookings/{id}` | View details & update status / notes |
+| GET | `/api/admin/bookings/export/csv` | Download bookings dataset as CSV |
+| GET/PUT/DELETE | `/api/admin/contacts` | Manage customer inquiry messages |
+| GET/POST/PUT/DELETE | `/api/admin/users` | Manage administrator accounts (Superadmin) |
+| GET/PUT | `/api/admin/settings` | Retrieve & update website settings |
+| POST | `/api/admin/upload` | Upload image (JPG, PNG, WebP) or video (MP4) |
 
 ### Example: Booking Request
 ```json

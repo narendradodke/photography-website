@@ -1,51 +1,37 @@
-﻿import json
-import os
-import uuid
 from typing import Any, Dict, List, Optional
-
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
-
-def read_json_file(filename: str) -> Any:
-    file_path = os.path.join(DATA_DIR, filename)
-    if not os.path.exists(file_path):
-        return []
-    with open(file_path, "r", encoding="utf-8-sig") as f:
-        return json.load(f)
+from app.db import repository
 
 class StorageService:
-    def __init__(self):
-        self.bookings: List[Dict[str, Any]] = []
-        self.contacts: List[Dict[str, Any]] = []
+    """Persistent SQLite-backed Storage Service replacing legacy in-memory lists."""
 
     def get_portfolio(self, category: Optional[str] = None) -> List[Dict[str, Any]]:
-        items = read_json_file("portfolio.json")
-        if category and category.lower() != "all":
-            return [it for it in items if it.get("category", "").lower() == category.lower()]
+        items, _ = repository.get_portfolio(category=category)
         return items
 
     def get_albums(self) -> Dict[str, Any]:
-        return read_json_file("albums.json")
+        return repository.get_albums_public()
 
     def get_reels(self) -> List[Dict[str, Any]]:
-        return read_json_file("reels.json")
+        raw_reels = repository.get_reels(only_visible=True)
+        reels = []
+        for r in raw_reels:
+            item = dict(r)
+            item["videoUrl"] = r.get("video_url") or ""
+            item["embedUrl"] = r.get("embed_url") or ""
+            item["cover"] = r.get("cover") or ""
+            reels.append(item)
+        return reels
 
     def get_packages(self) -> List[Dict[str, Any]]:
-        return read_json_file("packages.json")
+        return repository.get_packages(only_active=True)
 
     def get_testimonials(self) -> List[Dict[str, Any]]:
-        return read_json_file("testimonials.json")
+        return repository.get_testimonials(only_approved=True)
 
     def create_booking(self, data: Dict[str, Any]) -> str:
-        booking_id = f"BK-{uuid.uuid4().hex[:6].upper()}"
-        record = {
-            "booking_id": booking_id,
-            **data
-        }
-        self.bookings.append(record)
-        return booking_id
+        return repository.create_booking(data)
 
-    def create_contact(self, data: Dict[str, Any]) -> bool:
-        self.contacts.append(data)
-        return True
+    def create_contact(self, data: Dict[str, Any]) -> int:
+        return repository.create_contact(data)
 
 storage_service = StorageService()

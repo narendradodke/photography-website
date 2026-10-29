@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Camera, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { InstagramIcon, YoutubeIcon, FacebookIcon, TwitterIcon } from '../ui/SocialIcons';
 import { NAV_LINKS, SITE_NAME, TAGLINE, SOCIAL_LINKS } from '../../utils/constants';
@@ -126,6 +126,8 @@ export const Footer: React.FC = () => {
             <a href="#privacy" className="hover:text-neutral-400 transition-colors">Privacy Policy</a>
             <span>•</span>
             <a href="#terms" className="hover:text-neutral-400 transition-colors">Terms of Service</a>
+            <span>•</span>
+            <a href="/admin" className="hover:text-[#D4AF37] transition-colors">Admin Portal</a>
           </div>
         </div>
       </div>

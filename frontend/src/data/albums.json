@@ -7,6 +7,7 @@
     "badge": "Handcrafted Album Spread",
     "cover": "/images/albums/album-4.jpg",
     "previewImages": [
+      "/images/albums/album-4.jpg",
       "/images/albums/album-1.jpg",
       "/images/albums/album-2.jpg",
       "/images/albums/album-5.jpg"
@@ -18,63 +19,108 @@
       "title": "Royal Heritage & Red Lehenga",
       "photosCount": 45,
       "tag": "Traditional Wedding Spread",
-      "cover": "/images/albums/album-1.jpg"
+      "cover": "/images/albums/album-1.jpg",
+      "previewImages": [
+        "/images/albums/album-1.jpg",
+        "/images/albums/album-7.jpg",
+        "/images/albums/album-4.jpg"
+      ]
     },
     {
       "id": "album-2",
       "title": "Vibrant Festivities & South Indian Elegance",
       "photosCount": 50,
       "tag": "Ceremonial Panorama",
-      "cover": "/images/albums/album-2.jpg"
+      "cover": "/images/albums/album-2.jpg",
+      "previewImages": [
+        "/images/albums/album-2.jpg",
+        "/images/albums/album-9.jpg",
+        "/images/albums/album-3.jpg"
+      ]
     },
     {
       "id": "album-3",
       "title": "Ethereal Pastel Ring Ceremony",
       "photosCount": 35,
       "tag": "Engagement Spread",
-      "cover": "/images/albums/album-3.jpg"
+      "cover": "/images/albums/album-3.jpg",
+      "previewImages": [
+        "/images/albums/album-3.jpg",
+        "/images/albums/album-8.jpg",
+        "/images/albums/album-5.jpg"
+      ]
     },
     {
       "id": "album-4",
       "title": "Royal Mandap & Grand Vows",
       "photosCount": 60,
       "tag": "Grandeur & Nuptials",
-      "cover": "/images/albums/album-4.jpg"
+      "cover": "/images/albums/album-4.jpg",
+      "previewImages": [
+        "/images/albums/album-4.jpg",
+        "/images/albums/album-1.jpg",
+        "/images/albums/album-6.jpg"
+      ]
     },
     {
       "id": "album-5",
       "title": "Serene Forest Bride & Floral Memoir",
       "photosCount": 40,
       "tag": "Bridal Art Spread",
-      "cover": "/images/albums/album-5.jpg"
+      "cover": "/images/albums/album-5.jpg",
+      "previewImages": [
+        "/images/albums/album-5.jpg",
+        "/images/albums/album-2.jpg",
+        "/images/albums/album-7.jpg"
+      ]
     },
     {
       "id": "album-6",
       "title": "Crimson Embrace — Each Other",
       "photosCount": 45,
       "tag": "Couple Editorial Spread",
-      "cover": "/images/albums/album-6.jpg"
+      "cover": "/images/albums/album-6.jpg",
+      "previewImages": [
+        "/images/albums/album-6.jpg",
+        "/images/albums/album-4.jpg",
+        "/images/albums/album-8.jpg"
+      ]
     },
     {
       "id": "album-7",
       "title": "Saundarya Red Velvet Ceremony",
       "photosCount": 50,
       "tag": "Bridal Shringar Spread",
-      "cover": "/images/albums/album-7.jpg"
+      "cover": "/images/albums/album-7.jpg",
+      "previewImages": [
+        "/images/albums/album-7.jpg",
+        "/images/albums/album-1.jpg",
+        "/images/albums/album-9.jpg"
+      ]
     },
     {
       "id": "album-8",
       "title": "Veiled Glow & Spotlight Nuptials",
       "photosCount": 40,
       "tag": "Royal Veil Spread",
-      "cover": "/images/albums/album-8.jpg"
+      "cover": "/images/albums/album-8.jpg",
+      "previewImages": [
+        "/images/albums/album-8.jpg",
+        "/images/albums/album-3.jpg",
+        "/images/albums/album-5.jpg"
+      ]
     },
     {
       "id": "album-9",
       "title": "Vibrant Paithani Charm & Haldi Glow",
       "photosCount": 45,
       "tag": "Festive Silk Spread",
-      "cover": "/images/albums/album-9.jpg"
+      "cover": "/images/albums/album-9.jpg",
+      "previewImages": [
+        "/images/albums/album-9.jpg",
+        "/images/albums/album-2.jpg",
+        "/images/albums/album-6.jpg"
+      ]
     }
   ]
 }

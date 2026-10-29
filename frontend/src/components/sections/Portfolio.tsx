@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, MapPin, Camera } from 'lucide-react';
+import { ArrowUpRight, MapPin, Camera, Download } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Pill } from '../ui/Pill';
 import { getPortfolio } from '../../services/portfolioService';
 import type { PortfolioItem } from '../../types/portfolio';
 import { useUIStore } from '../../store/uiStore';
+import { downloadPortfolioPhoto } from '../../utils/downloadHelper';
 
 const CATEGORIES = [
   { id: 'all', label: 'All Work' },
@@ -21,9 +22,15 @@ export const Portfolio: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const { openLightbox } = useUIStore();
 
+  const handleCategoryChange = (catId: string) => {
+    if (catId !== selectedCategory) {
+      setSelectedCategory(catId);
+      setLoading(true);
+    }
+  };
+
   useEffect(() => {
     let isMounted = true;
-    setLoading(true);
     getPortfolio(selectedCategory).then((data) => {
       if (isMounted) {
         setItems(data);
@@ -53,7 +60,7 @@ export const Portfolio: React.FC = () => {
               key={cat.id}
               label={cat.label}
               active={selectedCategory === cat.id}
-              onClick={() => setSelectedCategory(cat.id)}
+              onClick={() => handleCategoryChange(cat.id)}
             />
           ))}
         </div>
@@ -99,7 +106,7 @@ export const Portfolio: React.FC = () => {
 
                   {/* Dark & Gold Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-end justify-between">
+                    <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-end justify-between gap-3">
                       <div>
                         <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#D4AF37]">
                           {item.category}
@@ -113,8 +120,25 @@ export const Portfolio: React.FC = () => {
                         </div>
                       </div>
 
-                      <div className="p-3 rounded-full bg-[#D4AF37] text-black shrink-0 hover:scale-110 transition-transform shadow-lg">
-                        <ArrowUpRight className="w-4 h-4" />
+                      <div className="flex items-center gap-2 shrink-0">
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            downloadPortfolioPhoto(item);
+                          }}
+                          className="p-3 rounded-full bg-black/75 hover:bg-[#D4AF37] text-white hover:text-black border border-white/20 hover:border-[#D4AF37] transition-all duration-200 shadow-lg hover:scale-105"
+                          title="Download high-res photo"
+                          aria-label={`Download photo ${item.title}`}
+                        >
+                          <Download className="w-4 h-4" />
+                        </button>
+                        <div
+                          className="p-3 rounded-full bg-[#D4AF37] text-black shrink-0 hover:scale-110 transition-transform shadow-lg"
+                          title="Open photo preview"
+                        >
+                          <ArrowUpRight className="w-4 h-4" />
+                        </div>
                       </div>
                     </div>
                   </div>

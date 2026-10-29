@@ -5,6 +5,7 @@
     "url": "https://www.instagram.com/reel/DZgrPl8Cotn/",
     "embedUrl": "https://www.instagram.com/reel/DZgrPl8Cotn/embed/",
     "videoUrl": "/videos/reels/reel-1.mp4",
+    "cover": "/videos/reels/reel-1-poster.jpg",
     "title": "Royal Heritage Nuptials",
     "category": "Weddings"
   },
@@ -14,6 +15,7 @@
     "url": "https://www.instagram.com/reel/DXwT1WAPEsg/",
     "embedUrl": "https://www.instagram.com/reel/DXwT1WAPEsg/embed/",
     "videoUrl": "/videos/reels/reel-2.mp4",
+    "cover": "/videos/reels/reel-2-poster.jpg",
     "title": "Pure Joy & Candid Vows",
     "category": "Weddings"
   },
@@ -23,6 +25,7 @@
     "url": "https://www.instagram.com/reel/DXMcR7ODxsR/",
     "embedUrl": "https://www.instagram.com/reel/DXMcR7ODxsR/embed/",
     "videoUrl": "/videos/reels/reel-3.mp4",
+    "cover": "/videos/reels/reel-3-poster.jpg",
     "title": "Golden Hour Bridal Walk",
     "category": "Bridal"
   },
@@ -32,6 +35,7 @@
     "url": "https://www.instagram.com/reel/DVXmACQjx0v/",
     "embedUrl": "https://www.instagram.com/reel/DVXmACQjx0v/embed/",
     "videoUrl": "/videos/reels/reel-4.mp4",
+    "cover": "/videos/reels/reel-4-poster.jpg",
     "title": "Intimate Celebrations",
     "category": "Ceremony"
   },
@@ -41,6 +45,7 @@
     "url": "https://www.instagram.com/reel/DZkMacFioOP/",
     "embedUrl": "https://www.instagram.com/reel/DZkMacFioOP/embed/",
     "videoUrl": "/videos/reels/reel-5.mp4",
+    "cover": "/videos/reels/reel-5-poster.jpg",
     "title": "Cinematic Sangeet Rhythm",
     "category": "Festivities"
   },
@@ -50,6 +55,7 @@
     "url": "https://www.instagram.com/reel/DXS3wOpD2Xh/",
     "embedUrl": "https://www.instagram.com/reel/DXS3wOpD2Xh/embed/",
     "videoUrl": "/videos/reels/reel-6.mp4",
+    "cover": "/videos/reels/reel-6-poster.jpg",
     "title": "The Grand Jaimala Magic",
     "category": "Moments"
   },
@@ -59,6 +65,7 @@
     "url": "https://www.instagram.com/reel/DYI8Uccinj_/",
     "embedUrl": "https://www.instagram.com/reel/DYI8Uccinj_/embed/",
     "videoUrl": "/videos/reels/reel-7.mp4",
+    "cover": "/videos/reels/reel-7-poster.jpg",
     "title": "Forever Begins Tonight",
     "category": "Weddings"
   }

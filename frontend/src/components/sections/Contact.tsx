@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
@@ -10,16 +10,20 @@ export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
+    setErrorMessage(null);
     try {
       await submitContact(formData);
       setSent(true);
       setFormData({ name: '', email: '', message: '' });
-    } catch {
-      //
+    } catch (err: any) {
+      setErrorMessage(
+        err?.response?.data?.detail || 'Unable to deliver your message at this moment. Please reach out directly via phone or email.'
+      );
     } finally {
       setSubmitting(false);
     }
@@ -115,6 +119,11 @@ export const Contact: React.FC = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {errorMessage && (
+                  <div className="p-3 bg-red-950/40 border border-red-500/50 text-red-200 text-xs rounded">
+                    {errorMessage}
+                  </div>
+                )}
                 <div>
                   <label className="block text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-400 light:text-neutral-600 font-semibold mb-2">
                     Your Name *

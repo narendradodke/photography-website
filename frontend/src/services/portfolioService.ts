@@ -1,4 +1,4 @@
-﻿import { apiClient } from './api';
+import { apiClient } from './api';
 import portfolioData from '../data/portfolio.json';
 import albumsData from '../data/albums.json';
 import reelsData from '../data/reels.json';
@@ -30,10 +30,30 @@ export async function getAlbums(): Promise<AlbumsData> {
 
 export async function getReels(): Promise<ReelItem[]> {
   try {
-    const res = await apiClient.get<ReelItem[]>('/reels');
-    return res.data;
+    const res = await apiClient.get<any[]>('/reels');
+    return res.data.map((item) => ({
+      id: item.id,
+      shortcode: item.shortcode || '',
+      url: item.url || '',
+      embedUrl: item.embedUrl || item.embed_url || '',
+      videoUrl: item.videoUrl || item.video_url || '',
+      cover: item.cover || '',
+      title: item.title,
+      category: item.category,
+      duration: item.duration || '0:45',
+    }));
   } catch {
-    return reelsData as ReelItem[];
+    return (reelsData as any[]).map((item) => ({
+      id: item.id,
+      shortcode: item.shortcode || '',
+      url: item.url || '',
+      embedUrl: item.embedUrl || item.embed_url || '',
+      videoUrl: item.videoUrl || item.video_url || '',
+      cover: item.cover || '',
+      title: item.title,
+      category: item.category,
+      duration: item.duration || '0:45',
+    }));
   }
 }
 

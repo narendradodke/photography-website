@@ -22,14 +22,19 @@ export interface AlbumFeatured {
 export interface AlbumItem {
   id: string;
   title: string;
+  subtitle?: string;
   photosCount: number;
   tag: string;
+  badge?: string;
   cover: string;
+  previewImages?: string[];
+  isFeatured?: boolean;
 }
 
 export interface AlbumsData {
   featured: AlbumFeatured;
   carousel: AlbumItem[];
+  albums?: AlbumItem[];
 }
 
 export interface ReelItem {
@@ -37,11 +42,13 @@ export interface ReelItem {
   shortcode: string;
   url: string;
   embedUrl: string;
+  embed_url?: string;
   title: string;
   category: string;
   duration?: string;
   photosCount?: number;
   videoUrl?: string;
+  video_url?: string;
   cover?: string;
 }
 
