@@ -55,16 +55,30 @@ class Settings(BaseSettings):
             return
 
         errors = []
+        KNOWN_INSECURE_JWT = {
+            "lensframe-super-secret-key-change-in-production-2026-secure-token",
+            "replace-with-a-random-secure-secret-key-at-least-32-chars",
+            "change-me-in-production",
+            "secret",
+        }
         if not self.JWT_SECRET or not self.JWT_SECRET.strip():
             errors.append("Production deployment requires a non-empty JWT_SECRET.")
-        elif self.JWT_SECRET == "lensframe-super-secret-key-change-in-production-2026-secure-token":
+        elif self.JWT_SECRET in KNOWN_INSECURE_JWT:
             errors.append("Production deployment requires a unique, non-default JWT_SECRET.")
         elif len(self.JWT_SECRET) < 32:
             errors.append("JWT_SECRET must be at least 32 characters in production.")
 
+        KNOWN_INSECURE_PASSWORDS = {
+            "LensFrame@2026!",
+            "ChangeThisPasswordPromptly123!",
+            "admin",
+            "admin123",
+            "password",
+            "changeme",
+        }
         if not self.INITIAL_ADMIN_PASSWORD or not self.INITIAL_ADMIN_PASSWORD.strip():
             errors.append("Production deployment requires an explicitly configured INITIAL_ADMIN_PASSWORD.")
-        elif self.INITIAL_ADMIN_PASSWORD == "LensFrame@2026!":
+        elif self.INITIAL_ADMIN_PASSWORD in KNOWN_INSECURE_PASSWORDS:
             errors.append("Production deployment requires an explicitly configured, non-default INITIAL_ADMIN_PASSWORD.")
         elif len(self.INITIAL_ADMIN_PASSWORD) < 8:
             errors.append("INITIAL_ADMIN_PASSWORD must be at least 8 characters in production.")

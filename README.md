@@ -229,23 +229,47 @@ uvicorn app.main:app --reload
 # Runs on http://localhost:8000
 ```
 
-### 4. Environment Variables
+### 4. Environment Variables Configuration
 
-**frontend/.env**
-```
+Create `.env` files from their respective `.env.example` templates:
+
+**`frontend/.env`**
+```env
+# Public backend API endpoint
 VITE_API_URL=http://localhost:8000/api
 VITE_SITE_NAME=LensFrame
 ```
 
-**backend/.env**
-```
+**`backend/.env`**
+```env
 APP_NAME=LensFrame API
 DEBUG=True
-CORS_ORIGINS=http://localhost:5173
+CORS_ORIGINS=http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000
+HOST=0.0.0.0
+PORT=8000
+
+# Database
+DATABASE_PATH=backend/lensframe.db
+
+# Security & JWT (Must be unique and >= 32 chars in production)
+JWT_SECRET=your-random-32-character-secret-key-here
+JWT_ALGORITHM=HS256
+JWT_EXPIRE_HOURS=24
+
+# Initial Admin Bootstrap (Used only when bootstrapping a clean database)
+INITIAL_ADMIN_USERNAME=admin
+INITIAL_ADMIN_EMAIL=admin@lensframe.com
+INITIAL_ADMIN_PASSWORD=your-secure-initial-password-here
+
+# Uploads
+UPLOAD_DIR=backend/uploads
+MAX_UPLOAD_SIZE_MB=25
+
+# SMTP Email Settings (Optional)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=your@email.com
-SMTP_PASSWORD=your_app_password
+SMTP_USER=your_email@gmail.com
+SMTP_PASSWORD=your_app_specific_password
 NOTIFY_EMAIL=arjun@lensframe.com
 ```
 
@@ -359,11 +383,57 @@ LensFrame includes a complete, production-grade **Admin Console** accessible at 
 - **Administrator Roster:** Multi-admin provisioning, role management, and active status toggling.
 - **Website Global Settings:** Manage Studio details, Social channels, Gallery settings, SEO tags, and administrator password rotation.
 
-### Default Administrator Credentials (Bootstrap)
-On fresh installation, the database automatically provisions the lead superadmin:
-- **URL:** `http://localhost:5173/admin/login` (or `/admin`)
-- **Username:** `admin`
-- **Default Password:** `LensFrame@2026!` *(Change promptly via Admin Console > Settings > Security)*
+### Initial Administrator Provisioning (Bootstrap)
+When bootstrapping a brand-new, empty database, the system initializes the initial lead superadmin account using values from `backend/.env`:
+- **Login URL:** `http://localhost:5173/admin/login` (or `/admin`)
+- **Username:** Defined by `INITIAL_ADMIN_USERNAME` (default: `admin`)
+- **Initial Password:** Configured securely in `backend/.env` via `INITIAL_ADMIN_PASSWORD`.
+
+> 🔒 **Security Best Practices:**
+> - Never commit `.env` files or hardcode passwords in version control.
+> - When deploying with `ENVIRONMENT=production`, the application strictly enforces:
+>   - `JWT_SECRET` must be non-default and at least 32 characters.
+>   - `INITIAL_ADMIN_PASSWORD` must be non-default and at least 8 characters.
+>   - `DEBUG` must be set to `False`.
+> - Always rotate your administrative password immediately upon initial deployment via **Admin Console > Settings > Security** (`/admin/settings`).
+
+---
+
+## 🔒 Security Operations & Administration
+
+### 1. Password Rotation Procedure
+Administrators can securely rotate their password at any time:
+1. Log into the studio admin workspace at `/admin`.
+2. Navigate to **Settings** (`/admin/settings`) and select the **Security** tab.
+3. Enter your current password, specify your new strong password (minimum 8 characters with mixed case, numbers, and symbols), and submit.
+4. The backend securely verifies the existing password, salts and hashes the new password with PBKDF2-HMAC-SHA256 (100,000 rounds), updates the database, and records an audit log entry.
+
+### 2. Secret Rotation Procedure (Compromise Recovery)
+If `JWT_SECRET` or any server credential is ever suspected of exposure:
+1. Generate a new high-entropy 32+ character random secret (e.g. `openssl rand -hex 32`).
+2. Update `JWT_SECRET` in `backend/.env` (or your production hosting environment secrets manager).
+3. Restart the backend process (`uvicorn app.main:app`).
+4. **Immediate Effect:** All previously issued JWT bearer tokens are instantly invalidated cryptographically without database changes. All administrators will be safely prompted to re-authenticate.
+
+### 3. Database Backup & Disaster Recovery (SQLite)
+The application uses SQLite in Write-Ahead Logging (WAL) mode with foreign key constraints.
+- **Online Hot Backup:**
+  Use the safe SQLite online backup API to take a live snapshot without locking writers:
+  ```bash
+  # Linux / macOS
+  sqlite3 backend/lensframe.db ".backup 'backend/backups/lensframe_$(date +%Y%m%d_%H%M%S).db'"
+
+  # Windows PowerShell
+  sqlite3 backend\lensframe.db ".backup 'backend\backups\lensframe_backup.db'"
+  ```
+- **Disaster Recovery:**
+  To restore from backup:
+  1. Stop the backend server process.
+  2. Copy the backup file over `backend/lensframe.db`.
+  3. Remove any lingering `-shm` or `-wal` companion files (`backend/lensframe.db-shm`, `backend/lensframe.db-wal`).
+  4. Restart the backend server process.
+
+---
 
 ---
 

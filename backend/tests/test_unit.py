@@ -545,6 +545,12 @@ def test_production_security_validation():
             settings.validate_production_config()
         assert "unique, non-default JWT_SECRET" in str(exc2.value)
 
+        # Case 2b: Example placeholder JWT secret
+        settings.JWT_SECRET = "replace-with-a-random-secure-secret-key-at-least-32-chars"
+        with pytest.raises(ValueError) as exc2b:
+            settings.validate_production_config()
+        assert "unique, non-default JWT_SECRET" in str(exc2b.value)
+
         # Case 3: Missing initial admin password
         settings.JWT_SECRET = "a" * 32
         settings.INITIAL_ADMIN_PASSWORD = ""
@@ -557,6 +563,12 @@ def test_production_security_validation():
         with pytest.raises(ValueError) as exc4:
             settings.validate_production_config()
         assert "non-default INITIAL_ADMIN_PASSWORD" in str(exc4.value)
+
+        # Case 4b: Example placeholder admin password
+        settings.INITIAL_ADMIN_PASSWORD = "ChangeThisPasswordPromptly123!"
+        with pytest.raises(ValueError) as exc4b:
+            settings.validate_production_config()
+        assert "non-default INITIAL_ADMIN_PASSWORD" in str(exc4b.value)
 
         # Case 5: DEBUG = True in production
         settings.INITIAL_ADMIN_PASSWORD = "StrongUniquePassword@999"
